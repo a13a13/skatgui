@@ -1,0 +1,1 @@
+package common; public class MinorVersion { public final static int minor =  10527 ; }
