@@ -1,0 +1,169 @@
+# $Id: makefile 6202 2007-11-10 07:08:16Z mburo $ 
+# (c) Michael Buro - licensed under GPLv3 
+
+# default compilation mode
+MODE := opt
+OBJ := obj
+DEP := dep
+VERBOSE := @
+
+WARN    := -Wall -W -Wundef
+OPT     := -O3
+OPT_FRAME := -fomit-frame-pointer 
+OFLAGS  := $(WARN) $(OPT) $(OPT_FRAME) 
+DFLAGS  := $(WARN) -g -ggdb -ftrapv # -D_GLIBCXX_DEBUG # STL debug mode is SLOW!
+SDFLAGS := $(WARN) -g -ggdb -ftrapv -D_GLIBCXX_DEBUG # STL debug mode is SLOW!
+PFLAGS  := $(WARN) $(OPT) -pg -O
+BPFLAGS := $(WARN) -g -ggdb -O2
+
+# \ for sed
+OBJ_OPT := $(OBJ)\/opt
+OBJ_DBG := $(OBJ)\/dbg
+OBJ_SDBG := $(OBJ)\/stldbg
+OBJ_PROF:= $(OBJ)\/prof
+OBJ_BP  := $(OBJ)\/bp
+
+ifeq ("$(MODE)", "opt")
+  FLAGS := $(OFLAGS) -DNDEBUG -Wuninitialized 
+  STRIP := strip
+  OBJ   := $(OBJ_OPT)
+  SHARED_LIBS := $(SHARED_LIBS0)
+else 
+  ifeq ("$(MODE)", "gprof")
+  FLAGS := $(PFLAGS) -DNDEBUG -Wuninitialized
+  STRIP := echo
+  OBJ   := $(OBJ_PROF)
+  SHARED_LIBS := $(SHARED_PROF_LIBS)
+else 
+  ifeq ("$(MODE)", "bp")
+  FLAGS := $(BPFLAGS) -DNDEBUG -Wuninitialized
+  STRIP := echo
+  OBJ   := $(OBJ_BP)
+  SHARED_LIBS := $(SHARED_BP_LIBS)
+else 
+  ifeq ("$(MODE)", "dbg")
+  FLAGS := $(DFLAGS) 
+  STRIP := echo
+  OBJ   := $(OBJ_DBG)
+  SHARED_LIBS := $(SHARED_LIBS0)
+else
+  ifeq ("$(MODE)", "stldbg")
+  FLAGS := $(SDFLAGS) 
+  STRIP := echo
+  OBJ   := $(OBJ_SDBG)
+  SHARED_LIBS := $(SHARED_LIBS0)
+else 
+# unknown MODE
+$(error "!!!!! unknown MODE=$(MODE) !!!!")
+endif
+endif
+endif
+endif
+endif
+
+INC_OPTS := -Isrc/shared
+CCOPTS   := -c -DUNIX -m32 $(CC_OPTS) $(FLAGS) $(ARCH_FLAGS) -std=c++0x -std=gnu++0x
+SRC      := src
+
+all: libsample sampletest
+
+###########################################################################
+# add subproject source files here + add $(*_FILES) to the ALL_C_FILES line
+###########################################################################
+
+ALL_C_FILES = $(wildcard $(SRC)/sample/*.cpp $(SRC)/jni/*.cpp)
+
+#$(warning ALL=$(ALL_C_FILES))
+
+####################################################################
+
+LIBSAMPLE_FILES := $(wildcard $(SRC)/sample/*.cpp $(SRC)/jni/*.cpp)
+
+####################################################################
+
+# more project source files go here
+
+################################# DO NOT CHANGE
+
+# how to compile source files
+COMP_EXEC = $(VERBOSE) $(CC) $(CCOPTS) $(INC_OPTS) -c -o $@ `pwd`/$<
+
+# how to create dependency files
+# add depfile (.d) as dependent file
+# (***) (can't use $(DEP) in sed command because it contains / - so if DEP changes edit this line!
+# also prepend object path for .o file
+DEP_EXEC = $(VERBOSE) set -e; $(CC) $(CCOPTS) -MM $(INC_OPTS) $< | sed 's/.*\.o[ :]*/$(OBJ)\/$(subst /,.,$<).o dep\/$(@F) : /g' > $@
+
+# | $(AWK) '{ if (index($$1,".o") > 0) { print "$$(OBJ)/" $$0 ; } else { print $$0; } }' > $@; [ -s $@ ] || rm -f $@
+
+#-------------------------------------
+
+# $(warning CREATE $$(OBJ)/$(subst /,.,$1).o : $1) 
+# $(warning CREATE $$(DEP)/$(subst /,.,$1).d : $1) 
+
+# create rules for individual source files
+
+define create_file_rule
+
+$$(OBJ)/$(subst /,.,$1).o : $1 $$(DEP)/$(subst /,.,$1).d make-libsample
+	@ echo "comp($$(MODE)):" $$<
+	@ mkdir -p $(OBJ)
+	$$(COMP_EXEC)
+
+$$(DEP)/$(subst /,.,$1).d : $1 make-libsample
+	@ echo dep: $$<
+	@ mkdir -p $(DEP)
+	$$(DEP_EXEC)
+endef
+
+$(foreach file, $(ALL_C_FILES), $(eval $(call create_file_rule,$(file))))
+
+define create_o_files
+O_FILES   := $$(addsuffix .o, $($1))
+O_FILES   := $$(subst /,.,$$(O_FILES))
+O_FILES   := $$(addprefix $$(OBJ)/,$$(O_FILES))
+endef
+
+#################################################################
+# LIBSAMPLE
+
+$(eval $(call create_o_files,LIBSAMPLE_FILES))
+#$(warning X=$(X) O_FILES= $(O_FILES))
+
+libsample: $(O_FILES)
+	@ echo "link library libsample"
+	@ g++ -g -ggdb -m32 -shared -Wl,-soname,libsample.so -o libsample.so $^ -lc
+
+sampletest: $(O_FILES) $(OBJ)/src.jni.main.cpp.o
+	@ echo "link sampletest"
+	@ g++ -o sampletest $^
+
+#################################################################
+
+# ... more projects go here
+
+#################################################################
+
+clean:
+	rm -rf $(OBJ_OPT)/*.o
+	rm -rf $(OBJ_DBG)/*.o
+	rm -rf $(OBJ_PROF)/*.o
+	rm -rf $(OBJ_BP)/*.o
+	rm -rf $(DEP)/*
+
+init:
+	mkdir -p $(OBJ_OPT) $(OBJ_DBG) $(OBJ_PROF) $(OBJ_BP)
+
+# DO NOT CHANGE
+
+DEP_FILES := $(addsuffix .d, $(ALL_C_FILES))
+DEP_FILES := $(subst /,.,$(DEP_FILES))
+DEP_FILES := $(addprefix $(DEP)/,$(DEP_FILES))
+
+#$(warning !!!!!!!!!!!! DEP_FILES= $(DEP_FILES) )
+
+EXCL_INC := clean init 
+
+ifneq ("$(filter-out $(EXCL_INC),$(MAKECMDGOALS))", "")
+-include $(DEP_FILES)
+endif

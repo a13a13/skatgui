@@ -1,0 +1,10 @@
+
+build library in skatgui/c++/ with
+  make libsample
+
+make ISS client in skatgui/ with   
+ make sampleClient
+ [ also builds library ]
+
+start ISS client in skatgui/ with
+  java -Djava.library.path=./c++ -jar dist/skattaClient.jar -lib sampleplayer -delay "$@"

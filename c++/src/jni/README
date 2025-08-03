@@ -1,0 +1,17 @@
+C++ SimpleGame wrapper.
+
+Class SimpleGame contains all relevant data for computing a move by a
+C++ program.
+
+JNI interface:  (Java -> C++)
+
+  string computeMove(SimpleGame *sg, double remainingTime);
+
+To use the wrapper, include Wrapper.h in your C++ project and
+implement computeMove(). See c++/src/sample/
+
+A game is encoded as series of states. Java serializes it into a
+string and the C++ wrapper decodes the string and creates a SimpleGame
+object which is passed on to computeMove(). Wrapper.h provides all the
+necessary information to access game data. The move is returned as a
+string. See doc/skat-game-format for the move syntax.
