@@ -1,0 +1,30 @@
+Internationalization
+
+Use *.properties/.html as blueprints.
+
+Files to create:
+
+Server messages:
+
+src/data/i18n/
+  Server_xx.properties
+
+SkatGUI messages:
+
+src/data/i18n/gui/
+  TableWindow_xx.properties
+  ClientWindow_xx.properties
+
+ISS Startup page
+
+html/
+  index-xx.html
+
+
+run
+
+make -f make-clients skatgui
+to compile skatgui
+
+test with bin/skatgui
+

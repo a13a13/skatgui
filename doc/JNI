@@ -1,0 +1,32 @@
+JNI is a pain and perhaps all AI should be moved to C++.
+
+In the meantime, we use client/JNIPlayer which contains everything to
+hook up complete skat programs (such as xskat) or DDS solvers.
+
+Code for JNI Players is stored in shared libraries. New JNI players
+have to be registered (sic) in client/JNIPlayer.java and your library
+has to implement the newXXXplayer function. To learn how to add a new
+JNI player look at c++/src/xskat/XSkatPlayer.cpp and copy-adjust the
+first function. The player must also implement gameChange(),
+computeMove(), reset(), and interrupt() (see the header file) if you
+build a full player. If you want to hook up a new DDS solver Just
+implement DDS(). An example on how to do that is given in
+src/ai/kermit3/MCPlayerJNI.java .
+
+xskat only runs in 32 bit mode. So if you want to run a tournament
+with xskat and jni-kermit you'll need to create the 32-bit version of
+jniplayer:
+
+  cd c++/tim
+  [ make init : only once ]
+  scripts/makejni32
+
+and 
+
+  make jniplayer
+
+to create the 64 bit version. MCPlayerJNI calls one or the other
+automatically depending on the jvm being 32 or 64 bit.
+
+
+

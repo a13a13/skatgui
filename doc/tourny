@@ -1,0 +1,37 @@
+
+tournament commands
+
+tour <cmd> <params>
+
+cmds + params:
+
+create <name> <format> <starttime>
+  create tournament
+
+cancel <name>
+  cancel tournament
+
+join <name>
+  player signs up
+
+leave <name>
+  player leaves tournament
+
+list
+  list all tournaments
+
+ranking <name>
+  print player ranking for tournament
+
+------------
+
+tournament data
+
+format
+
+player list with stats
+
+round
+
+tables 
+

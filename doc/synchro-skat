@@ -1,0 +1,96 @@
+From http://meister-skat.de/ :
+
+Was ist Synchron-Skat?
+
+Beim Synchron-Skat wird zunächst nach den ganz normalen Skat-Regeln
+gespielt. Die Besonderheit beim Synchron-Skat besteht darin, dass an
+allen Tischen mit denselben Karten gespielt wird. Hierdurch wird der
+Glücks-Faktor minimiert - vielmehr ist es entscheidend, was man aus
+seinen Karten macht. Entscheidenden Einluß hat hierauf aber nicht nur
+die eigene Spielstärke sondern naturgemäß auch die Spielstärke der
+Mitspieler am Tisch.
+
+Der Turnierablauf ist beim Synchron-Skat identisch zu einem normalen
+Turnier und nach meinem Verständnis gelten auch für die Spielweise
+keine anderen Voraussetzungen. Die einzige Ausnahmen, die mir spontan
+einfallen sind "unglaublich" schlechte Karten oder "unglaublich" gute
+Karten. Bei einer solchen Konstellation kann man sich bei einem
+normalen Turnier weder gegen den ersten respektive den letzten Platz
+wehren und die Spielweise ist für den Erfolg unwichtig. Ganz anders
+beim Synchron-Skat, hier kann man mit den grausamsten Blättern
+durchaus das Turnier gewinnen bzw. mit den tollsten Karten den letzten
+Platz belegen.
+
+Wie funktioniert die Auswertung im Detail?
+
+1. Schritt: Zunächst wird für jeden Tische eine "Null-Summe" gebildet,
+d.h. die Punkte der Spieler werden so umgerechnet, dass die Summe für
+jeden Tisch gleich Null ist. Ein kleines Beispiel: Spieler A (1100
+Punkte), Spieler B (1000 Punkte), Spieler C (900) Punkte => Spieler A
+(+100 Punkte) Spieler B (0 Punkte) Spieler C (-100 Punkte). Es macht
+also für die Gegenspieler einen Unterschied, ob der Solist "Schneider"
+gewinnt oder nicht.
+
+2. Schritt: Jetzt werden die erzielten Punkte nach der
+Null-Summenwertung an den verschiedenen Positionen verglichen. Je
+stärker das Ergebnis vom Durchschnitt abweicht, um so weiter oben
+bzw. hinten landet der Spieler schließlich in der Endwertung. Ein
+kleines Beispiel: An Tisch 1 Spieler A1 (+100), Spieler B1 (0),
+Spieler C1 (-100). An Tisch 2 haben die Spieler A2, B2 und C2 dieselbe
+Punktzahl (in der Nullsummenwertung also alle Null) erzielt. Die
+Spieler A1 und C2 landen damit auf Platz 1 mit +50 Punkten, B1 und B2
+mit 0 auf Platz 3 und die Spieler A2 und C1 mit -50 Punkten auf dem
+5. Platz.
+
+3. Schritt: Damit auch Listen mit in die Bewertung eingehen können,
+die nicht vollständig durchgespielt worden sind (dies sollte natürlich
+nach Möglichkeit nicht der Fall sein!), erfolgt die vorstehend
+genannte Berechnung nicht auf Basis der Gesamtpunkte sondern für jedes
+durchgeführte Spiel. Die Punkte werden am Ende aufsummiert und wenn
+alle Listen komplett durchgespielt wurden, führt dies zum selben
+Ergebnis.
+
+Das klingt jetzt alles recht kompliziert - ist aber eigentlich
+unwichtig - versucht einfach so gut wie möglich zu spielen. Wenn euch
+dies gelingt, dann wird dies mit einer guten Platzierung belohnt.
+
+
+
+------------------------------------
+
+45 points for opponent loss at 3-table
+
+
+36
+
+36* 18 verloren ->   
+
+-12*(36+50) + 24*40 = -72
+
+
+48
+
+-12*(36+50) + 36*30 = +48
+
+-> 40->45
+
+-------------------------------
+
+6 wins 18 / 6 losses 18
+
+36:  6*18 - 6*36 + 12 * 40 = 372
+
+48:  6*18 - 6*36 + 18 * 30 = 432
+
+-> 40->45
+
+-------------------------------
+
+10 wins / 2 losses
+
+36:  10*18 - 2*36 + 4 * 40 = 372
+
+48:  10*18 - 2*36 + 6 * 30 = 432
+
+-> 40->45
+
