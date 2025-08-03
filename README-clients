@@ -1,0 +1,78 @@
+ISS Client software package
+---------------------------
+
+make -f make-clients
+
+creates 
+
+  dist/skatgui.jar
+  dist/sampleClient.jar
+  dist/jniClient.jar
+
+and
+
+  c++/sampletest
+  c++/libsampleplayer.so
+
+[ use
+
+ make -f make-clients skatgui
+ make -f make-clients sampleClient
+ make -f make-clients jniClient
+
+or 
+
+(cd c++
+ make -f make-libsample sampletest
+ make -f make-libsample libsample
+)
+
+to build them separately ]
+
+
+skatgui : java GUI for ISS
+
+  Start with java -jar dist/skatgui.jar <parameters> 
+             java -jar dist/skatgui.jar -  gives a list of parameters
+
+
+sampleClient : java ISS client, makes random moves
+
+  Start with java -jar dist/sampleClient.jar -h bodo1.cs.ualberta.ca -id <your-iss-id> -pw <your-iss-passwd> 
+             java -jar dist/sampleClient.jar -  gives a list of parameters
+
+
+jniClient : frontend for C++ clients
+
+  Start with java -Djava.library.path=./c++ -jar dist/jniClient.jar <parameters> 
+             java -Djava.library.path=./c++ -jar dist/jniClient.jar -  gives a list of paramters
+
+  To test the C++ sample client use
+ 
+    java -Djava.library.path=./c++ -jar dist/jniClient.jar -lib sampleplayer -h bodo1.cs.ualberta.ca -id <your-iss-id> -pw <your-iss-password>
+
+  When creating your own C++ client replace -lib sampleplayer
+  by -lib your-library after creating lib<your-library>.so in ./c++
+
+
+More information:
+
+The central classes to work with is SimpleGame and SimpleState. These
+contain the necessary information about the Skat game that is being
+played. SimpleGame consists of a sequence of SimpleState and moves.
+SimpleState holds all data necessary to play the next move. 
+
+For C++, the JNI interface serializes the current game into a string
+which is then de-serialized on the C++ side into a series of objects
+that closely map SimpleGame and SimpleState. The main task when
+connecting a C++ client to ISS is translating SimpleState data into a
+form that can be used by your skat program. Moves are reported back in
+form of strings.
+
+See:
+  src/client/
+  src/common/SimpleGame.java
+  src/common/SimpleState.java
+  c++/src/jni/README
+  c++/src/sample/
+  doc/skat-game-format
