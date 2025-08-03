@@ -1,0 +1,13 @@
+Too_few_parameters=Zuwenige Parameter
+Illformed_string=Fehlerhafte Zeichenkette
+Not_a_hex_number_in=Keine Hex-Zahl in 
+Non-ASCII_character_in=Kein ASCII Zeichen in
+Invalid_user_name=Ungültiger Benutzername
+Invalid_email_address=Ungültige Emailadresse
+User-id_is_not_available=Benutzername %1$s ist schon vergeben.
+lang.=D
+ISS_registration=ISS Registrierung
+reg_text=Hello!\n\nUm sich bei ISS anzumelden\n\nBenutzername: %1$s\nKennwort: %2$s\n\nbenutzen. Willkommen bei ISS!\n\nBesuchen Sie http://buro.dnsalias.net/iss/index-de.html#FirstSteps fuer eine Einfuehrung!
+reg_email_text=Eine Email mit einem vorrübergehenden ISS Kennwort wurde Ihnen zugesandt.
+up_msg=ISS Version %1$s läuft.
+Go_back=Zurückgehen und berichtigen.

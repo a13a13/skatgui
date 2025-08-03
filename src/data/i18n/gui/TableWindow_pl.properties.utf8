@@ -1,0 +1,184 @@
+invite_msg=### Aby zaprosić graczy, zaznacz ich\n### w oknie głównym i kliknij "zaproś"
+observe_msg=### Obserwujesz ten stół.\n### Gracze nie widzą cię i ty nie możesz mówić.
+
+Player=Gracz
+Lang.=Jęz.
+IP=IP
+Pos=Poz.
+Wins=Wyg.
+Losses=Przeg.
+Prev=Poprz.
+Total=Całowite
+Flag-34=3/4
+Flag-GameTalk=R
+Flag-Ready=G
+Ready=Ready
+
+Options=Opcje
+Help=Pomoc
+Game_Talk=Rozmowa w Grze
+Show_complete_game_history=Pokaż kompletna historię gry
+
+I'm_a_Noob=Nowicjusz
+Input=Konsolka
+Messages=Komunikaty
+Leave=Opuść
+See_Game=See Game
+See_Results=See Results
+Resize=Resize
+<html><center>R<br>e<br>s<br>u<br>l<br>t<br>s</center></html>=<html><center>R<br>e<br>s<br>u<br>l<br>t<br>s</center></html>
+<html><center>G<br>a<br>m<br>e</center></html>=<html><center>G<br>a<br>m<br>e</center></html>
+
+Tooltip-34=Zmień liczbę graczy
+Tooltip-Plus=Powiększ okno
+Tooltip-Minus=Zmniejsz okno
+Button-Invite=Zaproś
+Tooltip-Invite=Zaproś graczy wybranych w oknie głównym
+Button-GameTalk=Rozmowa
+Tooltip-GameTalk=Pozwól na rozmowę podczas gry
+Button-Ready=Gotowy
+Tooltip-Ready=Gotowy na następna grę
+
+Observer=Obserwator
+Table=Stół
+Type=Typ
+
+can't_access_suit_image=nie mogę dostać obrazu koloru
+
+want_to_play=Czy chcesz grać<br>%1$s%2$s na %3$d?
+
+# game types
+
+Grand=Grand
+Null=Null
+Clubs=Krojc
+Spades=Grin
+Hearts=Herc
+Diamonds=Szel
+Hand=Hand
+Ouvert=Ouvert
+Schwarz=Schwarz
+Schneider=Schneider
+
+GERMAN_Grand=Grand
+GERMAN_Null=Null
+GERMAN_Clubs=Acorn
+GERMAN_Spades=Green
+GERMAN_Hearts=Red
+GERMAN_Diamonds=Bells
+
+# positions
+
+FH=PR
+MH=ŚR
+RH=ZA
+
+# short form
+
+FH=P
+MH=Ś
+RH=Z
+
+Announce_contract=Zadeklaruj grę
+
+skatgui-help.html=skatgui-help-pl.html
+
+invite_error_message=Zaznacz graczy klikając na ich nazwy w głównym oknie, jednocześnie przytrzymując klawisz ctrl
+Table_Error_Message=Komunikat Błędu Stołu
+
+discard_error_message=Raise two cards to discard by clicking on them.<br>Click again to lower card.
+
+Yes=Tak
+No=Nie
+
+remaining_tricks?=Chcesz oddać pozostałe<br>sztychy przeciwnikom<br>lub poddać grę Null?
+
+Game_shortcut=Poddaj się
+
+Remaining_tricks_to_opponent(s)_or_resign_null_game=Oddać wszystkie sztychy przeciwnikom lub poddać grę Null
+As_declarer_you_can_reveal_your_hand_=Jako solista możesz odsłonić swoje karty
+
+want_show_cards?=Chcesz pokazać <br>swoje karty?
+
+Show_cards=Pokaż karty
+
+Decl.=Sol.
+Def.=Przec.
+
+Pass=Pas
+PassInfo=Pas
+
+Resigned=Skrót
+Left=Pozostał
+Timeout=Czas się skończył
+
+card?=karta?
+bid?=podbijasz?
+answer?=odpowiedź?
+
+Pickup_Skat=Podnieś Skat
+skat_or_declare?=Dźwigasz czy grasz?
+discard_and_declare=odłóż skat i zadeklaruj grę
+
+Game=Gra
+result=wynik
+Partner_shortcut=Twój partner chce oddać<br>pozostałe sztychy soliscie<br>lub poddać grę Null. Zgadzasz się?
+
+all_players_passed=wszyscy gracze spasowali
+player_left_the_game=gracz %1$s opuścił grę
+player_timeout=%1$s skończył ci się czas
+player_points=punkty graczy %1$s %2$d 
+with=z
+against=przeciwko
+card_points=%1$d oczek
+overbid=przelicytowany
+History=Historia
+Observing=Obserwuję
+Playing=Gram
+Bidding=Licytacja
+Previous_and_current_trick=Wcześniejszy i obecny sztych
+Contract=Gra
+Declare=Zapowiedz
+
+Your_bid?=Licytujesz?
+
+someones_bid?=%1$s licytuje
+
+bid_x_to_y?=%1$s's pod.do %2$s
+bid_x_to_you?=%1$s lic.do ciebie
+bid_you_to_x?=Twoja sta.do %1$s
+asked_you_by_x=%1$s mówi ci %2$d
+asked_x_by_y=%1$s mówi %2$s %3$d
+asked_x_by_you=Mówisz do %1$s %2$d
+
+Button-Show-Main=POG
+Tooltip-Show-Main=Pokaż Ono główne
+
+List=List
+Legend=Legend
+B=B
+BaseValue=Base Value; 
+M=M
+Matadors_Explanation=Matadors (high trumps with or without);
+Modifiers_Colon=Modifiers:  
+H=H
+Hand_Semicolon=Hand; 
+S=S
+Schneider_Semicolon=Schneider; 
+Z=Z
+Schwarz_Space=Schwarz 
+Schneider_Ann_Exp=schneider announced; 
+Schwarz_Ann_Exp=schwarz announced); 
+O=O
+Ouvert_Semicolon=Ouvert; 
+V=V
+Overbid.=Overbid.
+W=W
+Win_Semicolon=Win; 
+L=L
+Loss_Semicolon=Loss; 
+T=T
+Timeout_Semicolon=Timeout; 
+P=P
+All_Passed=All Passed.
+

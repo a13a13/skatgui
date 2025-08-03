@@ -1,0 +1,183 @@
+invite_msg=# Pour inviter d'autres joueurs, sélectionnez-les \n# dans la fenêtre principale, et cliquez <<Inviter>> \n# ou tapez <<@invite nom1 nom2 ...>> en-dessous \n# Pour commencer un match, cliquez “Prêt” \n# Pour écarter, cliquez deux cartes
+
+observe_msg=# Vous observez cette table-ci seulement.  Les \n# joueurs ne vous voient pas, et vous ne  \n# pouvez pas parler.
+
+Player=Joueur
+Lang.=Lang.
+IP=PI
+Pos.=Pos.
+Wins=Vict.
+Losses=Déf.
+Prev=Préc.
+Total=Total
+Flag-34=34
+Flag-GameTalk=Parl.
+Flag-Ready=Prêt
+Ready=Prêt
+
+Options=Options
+Help=Secours
+Game_Talk=Conversation en Match
+Show_complete_game_history=Montrer l'histoire du match
+I'm_a_Noob=Nouveau
+Input=Données
+Messages=Messages
+Leave=Partir
+See_Game=Voir le Match
+See_Results=Voir les Résultats
+Resize=Redimensionner
+<html><center>R<br>e<br>s<br>u<br>l<br>t<br>s</center></html>=<html><center>R<br>é<br>s<br>u<br>l<br>t<br>a<br>t<br>s</center></html>
+<html><center>G<br>a<br>m<br>e</center></html>=<html><center>M<br>a<br>t<br>c<br>h</center></html>
+
+Tooltip-34=Changer le nombre de joueurs
+Tooltip-Plus=Augmenter les dimensions de la fenêtre
+Tooltip-Minus=Diminuer les dimensions de la fenêtre
+Button-Invite=Inviter
+Tooltip-Invite=Inviter les joueurs sélectionnés dans la fenêtre principale
+Button-GameTalk=Parler
+Tooltip-GameTalk=Permettre la conversation durant le match
+Button-Ready=Prêt
+Tooltip-Ready=Prêt au prochain match
+
+Observer=Observateur
+Table=Table
+Type=Type
+
+can't_access_suit_image=ne peut pas accéder à l'image pour le couleur
+want_to_play=Voulez-vous jouer<br>%1$s%2$s à %3$d ?
+
+Grand=Grand
+Null=Nul
+Clubs=Trèfles
+Spades=Piques
+Hearts=Coeurs
+Diamonds=Carreaux
+Hand=Main
+Ouvert=Ouvert
+Schwarz=Schwarz
+Schneider=Schneider
+
+GERMAN_Grand=Grand
+GERMAN_Null=Nul
+# Slightly unsure of the name for German clubs -- it is the direct translation of "acorns".
+GERMAN_Clubs=Glands
+GERMAN_Spades=Vert
+GERMAN_Hearts=Rouge
+GERMAN_Diamonds=Cloches
+
+FH=PM
+# première main
+MH=MM
+# main milieu
+RH=DM
+# dernière main
+
+F=P
+M=M
+R=D
+
+Announce_contract=Annoncer un contrat
+
+skatgui-help.html=skatgui-help-fr.html
+
+invite_error_message=Pour sélectionnez les joueurs, cliquez ses noms avec le bouton droit dans la fenêtre principale
+Table_Error_Message=Message d'Erreur à la Table
+
+discard_error_message=Pour lever deux cartes a écarter, cliquez sur elles.<br>Cliquez encore pour baisser une carte.
+
+Yes=Oui
+No=Non
+
+remaining_tricks?=Voulez-vous donner les plis restants<br>aux adversaires ou vous retirer d'un match de<br>type nul?
+
+Game_shortcut=Retirer
+
+Remaining_tricks_to_opponent(s)_or_resign_null_game=Les plis restants aux adversaires ou se retirer<br>d'un match de type nul
+As_declarer_you_can_reveal_your_hand_=En tant que déclarateur, vous pouvez révéler votre main
+
+want_show_cards?=Voulez-vous montrer vos cartes<br>aux adversaires?
+
+Show_cards=Montrer
+
+Decl.=Décl.
+Def.=Déf.
+
+Pass=Non
+PassInfo=Passé
+
+Resigned=Retiré
+Left=Parti
+Timeout=Dépassement de temps
+
+card?=carte?
+bid?=annonce?
+answer?=réponse?
+
+Pickup_Skat=Ramasser le Skat
+skat_or_declare?=Ramasser, ou Déclarer?
+discard_and_declare=Écarter et déclarer
+
+Game=Match
+result=résultat
+Partner_shortcut=Votre partenaire voudrait donner les<br>plis restants au déclarateur ou vous<br>retirer d'un match de type nul.<br>Êtes-vous d'accord?
+
+all_players_passed=tous les joueurs ont passés
+player_left_the_game=joueur %1$s a parti le match
+player_timeout=joueur %1$s a dépassé son temps
+player_points=joueur %1$s %2$d points
+with=avec
+against=sans
+card_points=%1$d points de cartes
+overbid=annonce trop élevée
+History=Histoire
+Observing=Observant
+Playing=Jouant
+Bidding=Annonçant
+Previous_and_current_trick=Plis précédent et courant
+Contract=Contrat
+Declare=Déclarer
+
+Your_bid?=Votre annonce?
+
+someones_bid?=Annonce de %1$s?
+
+bid_x_to_y?=%1$s dit à %2$s
+bid_x_to_you?=%1$s vous dit
+bid_you_to_x?=Vous dites à %1$s
+asked_you_by_x=%1$s vous dit %2$d
+asked_x_by_y=%1$s dit %3$d à %2$s
+asked_x_by_you=Vous dites %2$d à %1$s
+
+Button-Show-Main=MFP
+Tooltip-Show-Main=Montrer la Fenêtre Principale
+
+Resize_Window=Redimensionner
+
+# For tournament-style result table:
+List=Liste
+Legend=Légende  
+B=VB
+BaseValue=Valeur de Base; 
+M=M
+Matadors_Explanation=Matadors (les atouts les plus hauts sans/avec);
+Modifiers_Colon=Modificateurs:  
+H=M
+Hand_Semicolon=Main; 
+S=S
+Schneider_Semicolon=Schneider; 
+Z=Z
+Schwarz_Space=Schwarz 
+Schneider_Ann_Exp=schneider announced; 
+Schwarz_Ann_Exp=schwarz announced); 
+O=O
+Ouvert_Semicolon=Ouvert; 
+V=X
+Overbid.=Annonce trop élevée.
+W=V
+Win_Semicolon=Victoires; 
+L=D
+Loss_Semicolon=Défaites; 
+T=T
+Timeout_Semicolon=Dépassement de temps; 
+P=P
+All_Passed=Tous ont passés.

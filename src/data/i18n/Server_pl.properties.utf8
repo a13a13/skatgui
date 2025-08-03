@@ -1,0 +1,14 @@
+Too_few_parameters=Zbyt dużo parametrów
+Illformed_string=Źle skonstruowany ciąg znaków
+Not_a_hex_number_in=Nie podano liczby szesnastkowej w
+Non-ASCII_character_in=Nie podano znaku ASCII w
+Invalid_user_name=Nieprawidłowa nazwa użytkownika
+Invalid_email_address=Nieprawidłowy adres email
+User-id_is_not_available=Nazwa użytkownika %1$s jest niedostępna
+lang.=język
+ISS_registration=rejestracja w ISS
+reg_text=Witaj!\n\nAby zalogować się w ISS wpisz:\n\nNazwa użytkownika:   %1$s\nHasło: %2$s\n\nWitaj w ISS!
+reg_email_text=Email z tymczasowym hasłem został wysłany do Ciebie.
+up_msg=działająca wersja ISS to %1$ .
+Go_back=Wróć się aby naprawić problem.
+

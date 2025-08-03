@@ -1,0 +1,14 @@
+Too_few_parameters=Trop peu de paramètres
+Illformed_string=Chaîne de caractères improprement formée
+Not_a_hex_number_in=Pas un nombre hexadécimal dans
+Non-ASCII_character_in=Caractère non-ASCII dans
+Invalid_user_name=Nom d'utilisateur invalide
+Invalid_email_address=Adresse électronique invalide
+User-id_is_not_available=Nom d'utilisateur %1$s n'est pas disponible
+lang.=E
+ISS_registration=Inscription sur ISS
+reg_text=Bonjour!\n\nPour accéder au Serveur International de Skat (ISS), s'il vous plaît utilisez\n\nNom d'utilisateur: %1$s\nMot de passe: %2$s\n\nBienvenue à ISS!\n\nVisitez http://buro.dnsalias.net/iss/skatgui-help-fr.html pour une introduction!
+reg_email_text=Un message électronique avec votre mot de passe temporaire pour ISS vous a été envoyé.
+up_msg=Version %1$s de ISS est disponible.
+Go_back=Retournez pour réparer le problème.
+

@@ -1,0 +1,149 @@
+<html>
+<script type="text/javascript">
+
+var returnVal=true;
+var DEBUG=0;
+
+// challenge question: rnd1+rnd2 = ?   :-)
+var rnd1=Math.floor(Math.random()*100);
+var rnd2=Math.floor(Math.random()*10)+1;
+
+function echeck(str) {
+  var at="@"
+  var dot="."
+
+  for (i=0; i < str.length; i++) {
+    var c = str.charAt(i);
+    if (c < '!' || c > '~') return false;
+  }
+
+var lat=str.indexOf(at)
+var lstr=str.length
+var ldot=str.indexOf(dot)
+if (str.indexOf(at)==-1){
+   return false;
+}
+
+if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+   return false
+}
+
+if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+    return false;
+}
+
+ if (str.indexOf(at,(lat+1))!=-1){
+    return false;
+ }
+
+ if (str.substring(lat-1,lat)==dot ||
+ str.substring(lat+1,lat+2)==dot){
+    return false;
+ }
+
+ if (str.indexOf(dot,(lat+2))==-1){
+    return false;
+ }
+
+ if (str.indexOf(" ")!=-1){
+    return false;
+ }
+
+ return true;
+}
+
+
+function ncheck(str) {
+
+  if (str.length < 3 || str.length > 8) return false;
+
+  var c = str.charAt(0);
+  if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
+    return false;
+
+  for (i=1; i < str.length; i++) {
+    var d = str.charAt(i);
+    if (d == ':' || d < '!' || d > '~') 
+      return false;
+  }
+
+  return true;
+}
+
+
+// alert(unescape("%E4%F6%FC%DF"));
+
+function validate_form(thisform)
+{
+  with (thisform)
+  {
+    if (ncheck(username.value) == false)
+    {
+      username.focus();
+      alert(unescape("Ung%FCltiger Benutzername (3..8 Zeichen beginnend mit Buchstabe)"));
+      return false;
+    }
+
+    if (echeck(email.value) == false)
+    {
+      email.focus();
+      alert(unescape("Ung%FCltige Emailadresse"));
+      return false
+    }
+
+    if (email.value != email2.value)
+    {
+      email2.focus();
+      alert(unescape("Emailadresse und Best%E4tigung ungleich"));
+      return false
+    }
+
+    if (challenge.value != rnd1 + rnd2) {
+      alert("Falsche Antwort - bitte nochmal versuchen");
+      challenge.focus();
+      return false;
+    }
+  }  
+
+  return true;
+}
+
+//]]></script>
+</head><body link="#ffff00" alink="#ffff00" vlink="#00ffff" bgcolor="#ffffff" text="#000000"><center>
+
+<h2>Registrierung beim Internationalen Skat Server</h2>
+
+<table border=0 bgcolor="#c0c0c0" cellpadding=5 cellspacing=0>
+<form method="get"
+      action="/de-check?">
+<!--      enctype="multipart/form-data"> -->
+
+<tr><td align="right">Ihr ISS Benutzername:</td><td><input type="text"
+                                                    name="username"
+                                                    size="30"
+                                                    /></td></tr>
+<tr><td align="right">Ihre Emailadresse:</td><td><input type="text"
+                                                    name="email"
+                                                    size="30"
+                                                    /></td></tr>
+<tr><td align="right">Emailadresse best&auml;tigen:</td><td><input type="text"
+                                                            name="email2"
+                                                            size="30"
+                                                            /></td></tr>
+
+<tr><td align="right">
+<script type="text/javascript">
+document.write("Wieviel ist "+rnd1+"+"+rnd2+"?")
+</script>
+</td><td><input type="text" name="challenge" size="3" /></td></tr>
+
+<tr>
+<td colspan=2 align="center">
+<hr noshade size=1>
+<input type="submit" name="submit" value="Registrieren" onclick="return validate_form(this.form)" />
+</td>
+</tr>
+<div></div></form>
+</table>
+</center>
+</html>

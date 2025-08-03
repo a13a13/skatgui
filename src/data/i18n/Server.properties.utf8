@@ -1,0 +1,14 @@
+Too_few_parameters=Too few parameters
+Illformed_string=Illformed string
+Not_a_hex_number_in=Not a hex number in
+Non-ASCII_character_in=Non-ASCII character in
+Invalid_user_name=Invalid user name
+Invalid_email_address=Invalid email address
+User-id_is_not_available=User-id %1$s is not available
+lang.=E
+ISS_registration=ISS registration
+reg_text=Hello!\n\nTo logon to ISS please use\n\nUserId:   %1$s\nPassword: %2$s\n\nWelcome to ISS!\n\nVisit http://buro.dnsalias.net/iss/index.html#FirstSteps for an introduction!
+reg_email_text=An email with your temporary ISS password has been sent to you.
+up_msg=ISS version %1$s is up.
+Go_back=Go back to fix the problem.
+
